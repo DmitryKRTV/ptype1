@@ -159,6 +159,7 @@ img {
     padding: 1.25rem 2rem;
     border-radius: 1rem;
     font-weight: var(--font-medium);
+    transition: 0.3s;
 }
 
 .button:hover {
