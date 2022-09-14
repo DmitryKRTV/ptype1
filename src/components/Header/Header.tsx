@@ -3,14 +3,10 @@ import "./header.css"
 
 type linksType = "#home" | "#about" | "#skills" | "#services" | "#portfolio" | "#contact"
 
+
 export const Header = () => {
 
-
-
     useEffect(() => {
-        // @ts-ignore
-        // const contact = document.querySelector(".contact").scrollHeight
-        // console.log(contact)
         document.addEventListener("scroll",scrollHandler)
         return () => {
             document.removeEventListener("scroll",scrollHandler)
@@ -19,7 +15,6 @@ export const Header = () => {
 
     const scrollHandler = (e: any) => {
         const header = document.querySelector(".header")
-        // console.log(e.target.documentElement.scrollHeight)
         if (window.scrollY >= 80 && header) {
             header.classList.add("scroll-header")
         } else if (window.scrollY < 80 && header) {

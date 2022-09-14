@@ -40,6 +40,10 @@
 /* Medium */
 @media screen and (max-width: 768px) {
     .scrollUp {
+        bottom: -20%;
+    }
+
+    .show-scroll {
         bottom: 4rem;
     }
 }
