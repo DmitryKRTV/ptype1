@@ -27,6 +27,7 @@
 .home__title {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
+    /*line-height: calc(var(--big-font-size));*/
 }
 
 .home__hand {
@@ -66,7 +67,7 @@
     justify-self: center;
     width: 300px;
     height: 300px;
-    animation: profile__animate 6s ease-in-out infinite 1s;
+    animation: profile__animate 6s ease-in-out infinite 0s;
 }
 
 @keyframes profile__animate {

@@ -1,10 +1,11 @@
 import React from "react";
+import {fullName} from "../../assets/personalInfo"
 
 
 export const Data = () => {
     return (
         <div className="home__data">
-            <h1 className="home__title">John Smith
+            <h1 className="home__title">{fullName}
                 <svg
                     width="36"
                     height="36"
