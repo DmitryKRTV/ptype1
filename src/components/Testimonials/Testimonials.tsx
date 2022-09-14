@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import "./testimonials.css";
 import {testimonialsData} from "./data"
 // Import Swiper React components

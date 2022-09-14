@@ -5,6 +5,7 @@
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    transition: .3s;
 }
 
 .nav {
@@ -46,7 +47,11 @@
 
 .active-link,
 .nav__link:hover {
-    color: var(--title-color-dark)
+    color: var(--title-color-dark);
+}
+
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* BREAKPOINTS */
@@ -110,6 +115,10 @@
     .nav__close,
     .nav__toggle {
         display: block;
+    }
+
+    .scroll-header {
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     }
 }
 
