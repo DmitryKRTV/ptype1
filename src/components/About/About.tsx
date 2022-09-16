@@ -4,6 +4,8 @@ import aboutImg from "../../assets/about.jpg";
 // @ts-ignore
 import CV from "../../assets/johnCv.pdf"
 import {Info} from "./Info";
+import {aboutDescription} from "../../assets/personalInfo";
+
 
 export const About = () => {
 
@@ -19,7 +21,7 @@ export const About = () => {
                     <Info/>
 
                     <p className="about__description">
-                        Frontend developer, I create web pages with UI / UX user interface, I have years of experience and many clients are happy with the projects carried out.
+                        {aboutDescription}
                     </p>
 
                     <a download={""} href={CV} className="button button--flex">
