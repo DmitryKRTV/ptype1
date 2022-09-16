@@ -51,7 +51,8 @@
     --z-modal: 1000;
 
      /* image url */
-    --profile-img: url("./assets/profile.jpg")
+    --profile-img: url("./assets/myphotoHome.jpg");
+    --about-img: url("./assets/myphoto.jpg");
 
 }
 
