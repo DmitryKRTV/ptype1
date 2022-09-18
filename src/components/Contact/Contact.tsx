@@ -3,10 +3,10 @@ import emailjs from '@emailjs/browser';
 import "./contact.css"
 import {email} from "../../assets/personalInfo"
 import {emailHref} from "../../assets/personalInfo"
-import {whatsapp} from "../../assets/personalInfo"
-import {whatsappHref} from "../../assets/personalInfo"
-import {messenger} from "../../assets/personalInfo"
-import {messengerHref} from "../../assets/personalInfo"
+import {skype} from "../../assets/personalInfo"
+import {skypeHref} from "../../assets/personalInfo"
+import {telegram} from "../../assets/personalInfo"
+import {telegramHref} from "../../assets/personalInfo"
 
 
 export const Contact = () => {
@@ -46,30 +46,29 @@ export const Contact = () => {
 
                             <h3 className="contact__card-title">Email</h3>
                             <span className="contact__card-data">{email}</span>
-
-                            <a href={emailHref} className="contact__button">
+                            <a target={"_blank"} href={emailHref} className="contact__button" >
                                 Write me
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
                         <div className="contact__card">
-                            <i className="bx bxl-whatsapp contact__card-icon"></i>
 
-                            <h3 className="contact__card-title">Whatsapp</h3>
-                            <span className="contact__card-data">{whatsapp}</span>
+                            <i className="bx bxl-skype contact__card-icon"></i>
+                            <h3 className="contact__card-title">Skype</h3>
+                            <span className="contact__card-data">{skype}</span>
 
-                            <a href={whatsappHref} className="contact__button">
+                            <a target={"_blank"} href={skypeHref} className="contact__button">
                                 Write me
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
                         <div className="contact__card">
-                            <i className="bx bxl-messenger contact__card-icon"></i>
+                            <i className="bx bxl-telegram contact__card-icon"></i>
 
-                            <h3 className="contact__card-title">Messenger</h3>
-                            <span className="contact__card-data">{messenger}</span>
+                            <h3 className="contact__card-title">Telegram</h3>
+                            <span className="contact__card-data">{telegram}</span>
 
-                            <a href={messengerHref} className="contact__button">
+                            <a target={"_blank"} href={telegramHref} className="contact__button">
                                 Write me
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>

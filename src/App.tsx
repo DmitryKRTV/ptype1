@@ -10,6 +10,7 @@ import {Testimonials} from "./components/Testimonials/Testimonials";
 import {Contact} from "./components/Contact/Contact";
 import {Footer} from "./components/Footer/Footer";
 import {ScrollUp} from "./components/ScrollUp/ScrollUp";
+import {SkillsAlternative} from "./components/SkillsAlternative/Skills";
 
 function App() {
     return (
@@ -19,10 +20,10 @@ function App() {
             <main className="main">
                 <Home/>
                 <About/>
-                <Skills/>
+                <SkillsAlternative/>
                 <Services/>
                 <Qualification/>
-                <Testimonials/>
+                {/*<Testimonials/>*/}
                 <Contact/>
             </main>
 

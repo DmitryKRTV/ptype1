@@ -12,9 +12,6 @@ export const Social = () => {
             <a href="https://github.com/DmitryKRTV" className="home__social-icon" target="_blank">
                 <i className="uil uil-github-alt"></i>
             </a>
-            <a href="https://join.skype.com/invite/EHpHxaQWmdTd" className="home__social-icon" target="_blank">
-                <i className="uil uil-skype-alt"></i>
-            </a>
         </div>
     );
 };

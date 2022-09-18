@@ -1,0 +1,40 @@
+.skills__container {
+    grid-template-columns: repeat(2, 350px);
+    column-gap: 3rem;
+    justify-content: center;
+}
+
+.skills__content {
+    /*max-width: 768px;*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* BREAKPOINTS */
+
+/* Large */
+@media screen and (max-width: 992px) {
+    .skills__container {
+        grid-template-columns: max-content;
+        row-gap: 2rem;
+    }
+}
+
+/* Medium */
+
+@media screen and (max-width: 576px) {
+    .skills__container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Small */
+@media screen and (max-width: 350px) {
+
+}

@@ -7,13 +7,16 @@ export const nickName = "DmitryKRTV"
 export const aboutDescription = "I'm Frontend developer and I create web applications using React/Redux with responsive interface."
 
 //Contact component
-export const email = "user@gmail.com"
-export const emailHref = "mailto:examplemail@gmail.com.com"
+export const email = "dmitry.korotayev@gmail.com"
+export const emailHref = "mailto:dmitry.korotayev@gmail.com?subject=Write%20the%20topic&body=%0A%0AFull%20name:%0APhone%20number:"
 
-export const whatsapp = "999-888-777"
-export const whatsappHref = "999-888-777"
+export const skype = "Dmitry Korotaev"
+export const skypeHref = "https://join.skype.com/invite/EHpHxaQWmdTd"
 
-export const messenger = "user.fb123"
-export const messengerHref  = "https://m.me/crypticalcoder"
+export const telegram = "dmitryKorotaev"
+export const telegramHref  = "https://t.me/dmitryKorotaev"
+
+export const instagram = "vahkrasavcheg"
+export const instagramHref  = "https://www.instagram.com/vahkrasavcheg/"
 
 
