@@ -5,17 +5,18 @@ export type SkillType = {
     id: string
     title: string
     percent: number
+    delay: number
 }
 
 const initialState = [
-    {id: v1(), title: "Html", percent: 65},
-    {id: v1(), title: "Css", percent: 60},
-    {id: v1(), title: "JS/TS", percent: 65},
-    {id: v1(), title: "React", percent: 50},
-    {id: v1(), title: "Redux", percent: 54},
-    {id: v1(), title: "Storybook", percent: 66},
-    {id: v1(), title: "Git", percent: 53},
-    {id: v1(), title: "Jest", percent: 66},
+    {id: v1(), title: "Html", percent: 75, delay: 0.1},
+    {id: v1(), title: "Css", percent: 70, delay: 0.2},
+    {id: v1(), title: "JS/TS", percent: 75, delay: 0.2},
+    {id: v1(), title: "React", percent: 65, delay: 0.3},
+    {id: v1(), title: "Redux", percent: 64, delay: 0.3},
+    {id: v1(), title: "Storybook", percent: 76, delay: 0.3},
+    {id: v1(), title: "Git", percent: 63, delay: 0.4},
+    {id: v1(), title: "Jest", percent: 71, delay: 0.4},
 ]
 
 type GetSkills = ReturnType<typeof getSkillsAC>

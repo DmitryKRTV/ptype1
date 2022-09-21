@@ -2,8 +2,8 @@ import React, {useEffect} from "react";
 import "./skills.css";
 import {Skill} from "./Skill/Skill";
 import { useSelector} from "react-redux";
-import {AppRootState} from "../../redux/store";
-import {SkillType} from "../../redux/skills-reducer";
+import {AppRootState} from "../../../redux/store";
+import {SkillType} from "../../../redux/skills-reducer";
 
 export const SkillsAlternative = React.memo(() => {
 
