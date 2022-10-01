@@ -6,7 +6,7 @@
 
 
 .about__img-box {
-    width: 350px;
+    width: 355px;
     height: 100%;
     border-radius: 1.5rem;
     justify-self: center;
@@ -74,7 +74,7 @@
 }
 
 .about__description {
-    padding: 0 1rem 0 1rem;
+    padding: 0;
     margin-bottom: var(--mb-2-5);
 }
 
