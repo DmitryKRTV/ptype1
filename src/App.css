@@ -145,6 +145,20 @@ img {
     max-width: 968px;
     margin-left: auto;
     margin-right: auto;
+    /*animation: progress 1s ease-in-out forwards;*/
+    position: relative;
+    left: 0;
+}
+
+@keyframes progress {
+    0% {
+        left: -30px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .grid {
