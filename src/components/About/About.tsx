@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 // @ts-ignore
-import CV from "../../assets/johnCv.pdf"
+import CV from "../../assets/resume_dmitry_korotaevl.pdf"
 import {Info} from "./Info";
 import {aboutDescription} from "../../assets/personalInfo";
 
