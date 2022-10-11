@@ -2,8 +2,8 @@ import React from "react";
 import {Skill} from "./Skill";
 import s from "./SkillsBar.module.css"
 import {useSelector} from "react-redux";
-import {AppRootState} from "../../../redux/store";
-import {SkillType} from "../../../redux/skills-reducer";
+import {AppRootState} from "../../../../m2-bll/redux/store";
+import {SkillType} from "../../../../m2-bll/redux/skills-reducer";
 
 
 export const SkillsBar = () => {

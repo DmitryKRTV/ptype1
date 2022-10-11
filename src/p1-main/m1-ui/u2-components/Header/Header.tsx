@@ -1,6 +1,6 @@
 import React, {MouseEvent, useEffect, useState} from "react";
 import "./header.css"
-import {nickName} from "../../assets/personalInfo"
+import {nickName} from "../../../../p3-assets/personalInfo"
 
 type linksType = "#home" | "#about" | "#skills" | "#services" | "#portfolio" | "#contact"
 
@@ -33,7 +33,7 @@ export const Header = () => {
     return (
         <header className={"header"}>
             <nav className={"nav container"}>
-                <a href="index.html" className="nav__logo">{nickName}</a>
+                <a href="#" className="nav__logo">{nickName}</a>
                 <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list grid">
                         <li className="nav_item">

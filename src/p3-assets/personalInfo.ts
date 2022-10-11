@@ -1,4 +1,4 @@
-//Home components
+//Home u2-components
 export const fullName = "Dmitry Korotayev"
 export const description = "I'm creative employee based in Minsk, and I'm very passionate and dedicated to my work."
 export const nickName = "DmitryKRTV"

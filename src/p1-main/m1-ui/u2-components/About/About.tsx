@@ -1,30 +1,26 @@
 import React from "react";
-import "./about.css";
+import "./aboutOld.css";
+import {Info} from "./Info/Info";
+import {aboutDescription} from "../../../../p3-assets/personalInfo";
+import styles from "./about.module.scss"
 // @ts-ignore
-import CV from "../../assets/resume_dmitry_korotaevl.pdf"
-import {Info} from "./Info";
-import {aboutDescription} from "../../assets/personalInfo";
+import CV from "../../../../p3-assets/resume_dmitry_korotaevl.pdf"
 
 
 export const About = () => {
-
     return (
         <section className={"about section"} id={"about"}>
             <h2 className="section__title">About Me</h2>
             <span className="section__subtitle">My introduction</span>
 
-            <div className="about__container container grid">
-                <div className={"about__img-box"}>
+            <div className={`${styles.about__container} container grid`}>
+                <div className={`${styles["about__img-box"]}`}>
                 </div>
-
-
-                <div className="about__data">
+                <div className={`${styles.about__data}`}>
                     <Info/>
-
-                    <p className="about__description">
+                    <p className={`${styles.about__description}`}>
                         {aboutDescription}
                     </p>
-
                     <a download={""} href={CV} className="button button--flex">
                         Download CV
                         <svg

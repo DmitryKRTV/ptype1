@@ -1,12 +1,12 @@
 import React, {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import "./contact.css"
-import {email} from "../../assets/personalInfo"
-import {emailHref} from "../../assets/personalInfo"
-import {skype} from "../../assets/personalInfo"
-import {skypeHref} from "../../assets/personalInfo"
-import {telegram} from "../../assets/personalInfo"
-import {telegramHref} from "../../assets/personalInfo"
+import {email} from "../../../../p3-assets/personalInfo"
+import {emailHref} from "../../../../p3-assets/personalInfo"
+import {skype} from "../../../../p3-assets/personalInfo"
+import {skypeHref} from "../../../../p3-assets/personalInfo"
+import {telegram} from "../../../../p3-assets/personalInfo"
+import {telegramHref} from "../../../../p3-assets/personalInfo"
 
 
 export const Contact = () => {

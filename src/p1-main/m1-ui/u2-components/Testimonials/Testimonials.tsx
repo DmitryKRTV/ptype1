@@ -1,7 +1,7 @@
 import React from "react";
 import "./testimonials.css";
 import {testimonialsData} from "./data"
-// Import Swiper React components
+// Import Swiper React u2-components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

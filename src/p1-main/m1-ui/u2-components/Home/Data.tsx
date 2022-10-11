@@ -1,6 +1,6 @@
 import React from "react";
-import {fullName} from "../../assets/personalInfo"
-import {description} from "../../assets/personalInfo"
+import {fullName} from "../../../../p3-assets/personalInfo"
+import {description} from "../../../../p3-assets/personalInfo"
 
 
 export const Data = () => {
