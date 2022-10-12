@@ -1,17 +1,17 @@
 import React from "react";
-import {fullName} from "../../../../p3-assets/personalInfo"
-import {description} from "../../../../p3-assets/personalInfo"
-
+import {fullName} from "../../../../../p3-assets/personalInfo"
+import {description} from "../../../../../p3-assets/personalInfo"
+import styles from "../home.module.scss"
 
 export const Data = () => {
     return (
-        <div className="home__data">
+        <div className={`${styles.home__data}`}>
 
-            <h1 className="home__title">
+            <h1 className={`${styles.home__title}`}>
                 {fullName}
             </h1>
-            <h3 className="home__subtitle">Frontend Developer</h3>
-            <p className="home__description">
+            <h3 className={`${styles.home__subtitle}`}>Frontend Developer</h3>
+            <p className={`${styles.home__description}`}>
                 {description}
             </p>
             <a href="#contact" className="button button--flex">

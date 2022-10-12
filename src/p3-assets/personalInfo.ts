@@ -3,7 +3,7 @@ export const fullName = "Dmitry Korotayev"
 export const description = "I'm creative employee based in Minsk, and I'm very passionate and dedicated to my work."
 export const nickName = "DmitryKRTV"
 
-//About component
+//c2-about component
 export const aboutDescription = "I'm Frontend developer and I create web applications using React/Redux with responsive interface."
 
 //Contact component

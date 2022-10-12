@@ -1,5 +1,4 @@
 import React from "react";
-import "../aboutOld.css";
 import {InfoItem} from "./InfoItem";
 import styles from "../about.module.scss"
 

@@ -1,11 +1,12 @@
 import React from "react";
+import styles from "../home.module.scss"
 
 
 export const ScrollDown = () => {
 
     return (
-        <div className="home__scroll">
-            <a href="#about" className="home__scroll-button button--flex">
+        <div className={`${styles.home__scroll}`}>
+            <a href="#about" className="button--flex">
                 <svg
                     width="32px"
                     height="32px"
@@ -23,12 +24,12 @@ export const ScrollDown = () => {
                     }}
                 >
                     <path
-                        className="wheel"
+                        className={`${styles.wheel}`}
                         d="M123.359,79.775l0,72.843"
                         style={{
                             fill: "none",
                             stroke: "var(--title-color)",
-                            strokeWidth: "20px",
+                            strokeWidth: "12px",
                         }}
                     ></path>
                     <path
@@ -37,12 +38,12 @@ export const ScrollDown = () => {
                         style={{
                             fill: "none",
                             stroke: "var(--title-color)",
-                            strokeWidth: "20px",
+                            strokeWidth: "12px",
                         }}
                     ></path>
                 </svg>
-                <span className="home__scroll-name">Scroll Down</span>
-                <i className="uil uil-arrow-down home__scroll-arrow"></i>
+                <span className={`${styles["home__scroll-name"]}`}>Scroll Down</span>
+                <i className={`uil uil-arrow-down ${styles["home__scroll-arrow"]}`}></i>
             </a>
         </div>
     );

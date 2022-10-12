@@ -114,19 +114,22 @@
                     color: var(--title-color);
                     white-space: nowrap;
                     position: relative;
-                    &::after {
-                        content: "";
-                        background-color: var(--text-color);
-                        position: absolute;
-                        top: 1.8rem;
-                        left: 0;
-                        width: 100%;
-                        height: 1px;
-                    }
                     @media screen and (max-width: 992px) {
                         top: 0rem;
                     }
+                }
 
+                .about__box-text::after {
+                    content: "";
+                    background-color: var(--text-color);
+                    position: absolute;
+                    top: 1.8rem;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    @media screen and (max-width: 992px) {
+                        top: 1.5rem;
+                    }
                 }
 
                 .about__box-li {

@@ -1,5 +1,4 @@
 import React from "react";
-import "./aboutOld.css";
 import {Info} from "./Info/Info";
 import {aboutDescription} from "../../../../p3-assets/personalInfo";
 import styles from "./about.module.scss"

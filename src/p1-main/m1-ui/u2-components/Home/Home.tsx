@@ -1,16 +1,17 @@
 import React from "react";
 import "./home.css"
-import {Social} from "./Social";
-import {Data} from "./Data";
-import {ScrollDown} from "./ScrollDown";
+import {Social} from "./h2-Social/Social";
+import {Data} from "./h1-data/Data";
+import {ScrollDown} from "./h3-scrollDown/ScrollDown";
+import styles from "./home.module.scss"
 
 export const Home = () => {
     return (
         <section className="home section" id="home">
-            <div className="home__container container grid">
-                <div className="home__content grid">
+            <div className="container">
+                <div className={`${styles.home__content} grid`}>
                     <Social/>
-                    <div className="home__img"></div>
+                    <div className={`${styles.home__img}`}></div>
                     <Data/>
                 </div>
                 <ScrollDown/>

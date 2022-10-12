@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import {Header} from "../u2-components/Header/Header";
 import {Home} from "../u2-components/Home/Home";
-import {About} from "../u2-components/About/About";
+import {About} from "../u2-components/c2-about/About";
 import {Services} from "../u2-components/Services/Services";
 import {Qualification} from "../u2-components/Qualification/Qualification";
 import {Contact} from "../u2-components/Contact/Contact";
