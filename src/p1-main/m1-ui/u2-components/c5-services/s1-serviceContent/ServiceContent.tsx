@@ -25,7 +25,7 @@ export const ServiceContent = ({
                     </span>
             <div
                 className={toggleModal === serviceData.toggleModalStatic ? `${styles.services__modal} ${styles["active-modal"]}` : `${styles.services__modal}`}>
-                <div className={`${styles["services__modal-content"]}`}>
+                <div className={`${styles["services__modal-content"]}`} onClick={closeModal}>
                     <i className={`uil uil-times ${styles["services__modal-close"]}`} onClick={closeModal}></i>
                     <h3 className={`${styles["services__modal-title"]}`}>{serviceData.title}</h3>
                     <p className={`${styles["services__modal-description"]}`}>
