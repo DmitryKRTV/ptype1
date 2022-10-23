@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./skills.css";
 import {Skill} from "./Skill/Skill";
-import { useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {AppRootState} from "../../../../m2-bll/redux/store";
 import {SkillType} from "../../../../m2-bll/redux/skills-reducer";
 

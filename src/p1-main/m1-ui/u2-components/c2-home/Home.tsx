@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css"
 import {Social} from "./h2-Social/Social";
 import {Data} from "./h1-data/Data";
 import {ScrollDown} from "./h3-scrollDown/ScrollDown";

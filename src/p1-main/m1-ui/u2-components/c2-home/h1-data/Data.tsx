@@ -14,7 +14,7 @@ export const Data = () => {
             <p className={`${styles.home__description}`}>
                 {description}
             </p>
-            <a href="#contact" className="button button--flex">
+            <a href={`#contact`} className="button button--flex">
                 Say Hello
                 <svg
                     className="button__icon"

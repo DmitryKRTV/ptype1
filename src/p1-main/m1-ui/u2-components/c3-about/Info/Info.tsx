@@ -20,7 +20,7 @@ export const Info = () => {
                 <InfoItem spanValue={"+375 29 871-28-86"} underSpanValue={"Phone"} parityClass={""}/>
                 <InfoItem spanValue={"Dmitry Korotaev"} underSpanValue={"Skype"} parityClass={""}/>
                 <InfoItem spanValue={"dmitry.korotayev@gmail.com"} underSpanValue={"Email"} parityClass={""}/>
-                <InfoItem spanValue={"Freelance"} underSpanValue={"Labor Activity"} parityClass={""}/>
+                <InfoItem spanValue={"Part time"} underSpanValue={"Working Activity"} parityClass={""}/>
             </ul>
         </div>
     );
