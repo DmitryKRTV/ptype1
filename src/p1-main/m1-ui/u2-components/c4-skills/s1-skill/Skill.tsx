@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./SkillsBar.module.css"
+import s from "../SkillsBar.module.scss"
 
 type SkillType = {
     title: string

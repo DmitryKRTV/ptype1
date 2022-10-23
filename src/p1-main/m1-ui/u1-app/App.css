@@ -50,7 +50,7 @@
     --z-fixed: 100;
     --z-modal: 1000;
 
-     /* image url */
+    /* image url */
     --profile-img: url("../../../p3-assets/myphotoHome.jpg");
     --about-img: url("../../../p3-assets/myphoto.jpg");
 
@@ -143,6 +143,7 @@ img {
 /* LAYOUT */
 .container {
     max-width: 968px;
+    min-width: 300px;
     margin-left: auto;
     margin-right: auto;
     /*animation: progress 1s ease-in-out forwards;*/
@@ -207,7 +208,7 @@ img {
         width: 22px;
         height: 22px;
     }
-    
+
 }
 
 /* Medium */
