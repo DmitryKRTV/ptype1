@@ -6,6 +6,9 @@ import {Link} from "./h1-link/Link";
 
 export const Header = () => {
 
+    const [toggle, setToggle] = useState<boolean>(false);
+    const [activeNav, setActiveNav] = useState<linksType>("#home");
+
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler)
         return () => {
@@ -21,9 +24,6 @@ export const Header = () => {
             header.classList.remove(`${styles["scroll-header"]}`)
         }
     }
-
-    const [toggle, setToggle] = useState<boolean>(false);
-    const [activeNav, setActiveNav] = useState<linksType>("#home");
 
     const toggleMenuCB = () => {
         setToggle(!toggle)

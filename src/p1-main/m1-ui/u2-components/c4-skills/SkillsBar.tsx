@@ -7,6 +7,7 @@ import {SkillType} from "../../../m2-bll/redux/skills-reducer";
 
 
 export const SkillsBar = () => {
+
     const skills = useSelector<AppRootState, SkillType[]>((state) => state.skills);
 
     const finalSkills = skills.map(skill => {
