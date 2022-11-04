@@ -29,7 +29,7 @@ const servicesData: ServicesDataType[] = [
             "Build BLL using state managers like Redux, Redux-toolkit or Mobx.",
             "Understanding of AJAX, REST API and building DAL using frameworks(Thunk, Saga) or without it.",
             "Write code using TDD and test it using unit, snapshot, integrations and end-to-end(e2e) tests.",
-            "Working in Version control system such as Git and Subversion for participate a project.",
+            "Working in Version control system such as Git and Subversion for a project participating.",
             "Creating responsive layouts using UI frameworks such as Bootstrap, Material UI or AntDesign and using preprocessors(SASS/SCSS/LESS)."
         ]
     },
