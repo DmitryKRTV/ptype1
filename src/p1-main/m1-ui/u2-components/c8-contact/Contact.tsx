@@ -1,12 +1,12 @@
 import React, {useRef, useState} from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import "./contact.css"
-import {email} from "../../../../p3-assets/personalInfo"
-import {emailHref} from "../../../../p3-assets/personalInfo"
-import {skype} from "../../../../p3-assets/personalInfo"
-import {skypeHref} from "../../../../p3-assets/personalInfo"
-import {telegram} from "../../../../p3-assets/personalInfo"
-import {telegramHref} from "../../../../p3-assets/personalInfo"
+import {email} from "../../../../p2-assets/personalInfo"
+import {emailHref} from "../../../../p2-assets/personalInfo"
+import {skype} from "../../../../p2-assets/personalInfo"
+import {skypeHref} from "../../../../p2-assets/personalInfo"
+import {telegram} from "../../../../p2-assets/personalInfo"
+import {telegramHref} from "../../../../p2-assets/personalInfo"
 
 
 export const Contact = () => {
@@ -17,15 +17,10 @@ export const Contact = () => {
 
     const form = useRef<any>();
 
-    const sendEmail = (e:any) => {
+    const sendEmail = (e: any) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_9ryyzse', 'template_yvr4ykd', form.current, "GxyYPu0pIz4JHNRKt")
-            // .then((result) => {
-            //     console.log(result.text);
-            // }, (error) => {
-            //     console.log(error.text);
-            // });
+        emailjs.sendForm("service_9ryyzse", "template_yvr4ykd", form.current, "GxyYPu0pIz4JHNRKt")
 
         seNameF("")
         seEmailF("")
@@ -46,7 +41,7 @@ export const Contact = () => {
 
                             <h3 className="contact__card-title">Email</h3>
                             <span className="contact__card-data">{email}</span>
-                            <a target={"_blank"} href={emailHref} className="contact__button" >
+                            <a target={"_blank"} href={emailHref} className="contact__button">
                                 Write me
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -86,7 +81,9 @@ export const Contact = () => {
                                    className={"contact__form-input"}
                                    placeholder={"Insert your name"}
                                    value={nameF}
-                                   onChange={(e)=>{seNameF(e.currentTarget.value)}}
+                                   onChange={(e) => {
+                                       seNameF(e.currentTarget.value)
+                                   }}
                             />
                         </div>
                         <div className="contact__form-div">
@@ -96,7 +93,9 @@ export const Contact = () => {
                                    className={"contact__form-input"}
                                    placeholder={"Insert your email"}
                                    value={emailF}
-                                   onChange={(e)=>{seEmailF(e.currentTarget.value)}}
+                                   onChange={(e) => {
+                                       seEmailF(e.currentTarget.value)
+                                   }}
                             />
                         </div>
                         <div className="contact__form-div contact__form-area">
@@ -107,7 +106,9 @@ export const Contact = () => {
                                       className={"contact__form-input"}
                                       placeholder={"Write your project"}
                                       value={messageF}
-                                      onChange={(e)=> {seMessageF(e.currentTarget.value)}}
+                                      onChange={(e) => {
+                                          seMessageF(e.currentTarget.value)
+                                      }}
                             ></textarea>
                         </div>
                         <button className="button button--flex" type={"submit"} value={"Send"}>

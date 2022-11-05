@@ -38,7 +38,7 @@ export const Qualification = () => {
                 <div className={`${styles.qualification__sections}`}>
                     <div className={getClassForSection(0)}>
                         <QualificationItem position={"left"}
-                                           jobTitle={"Frontend"}
+                                           jobTitle={"Frontend Developer"}
                                            placeTitle={"IT-INCUBATOR, Course"}
                                            whenItWas={"June 2022 - Present"}
                         />

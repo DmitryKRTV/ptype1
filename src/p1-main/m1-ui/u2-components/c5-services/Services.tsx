@@ -42,8 +42,8 @@ const servicesData: ServicesDataType[] = [
             "Understanding of principles of OOP and Solid.",
             "Extending my knowledge of packaging, deploying, and running applications using Docker.",
             "Studying design patterns of OOP.",
-            "Work with relational and non-relational databases such as MongoDB, MySQL, PostgresQL and others.",
-            "Work in a team to meet deadlines and bring my solutions to life.",
+            "c7-work with relational and non-relational databases such as MongoDB, MySQL, PostgresQL and others.",
+            "c7-work in a team to meet deadlines and bring my solutions to life.",
             "Update already implemented and working suite solutions.",
         ]
     }

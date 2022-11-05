@@ -1,9 +1,9 @@
 import React from "react";
 import {Info} from "./Info/Info";
-import {aboutDescription} from "../../../../p3-assets/personalInfo";
+import {aboutDescription} from "../../../../p2-assets/personalInfo";
 import styles from "./about.module.scss"
 // @ts-ignore
-import CV from "../../../../p3-assets/resume_dmitry_korotaevl.pdf"
+import CV from "../../../../p2-assets/resume_dmitry_korotaevl.pdf"
 
 
 export const About = () => {

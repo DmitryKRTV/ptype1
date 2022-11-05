@@ -1,6 +1,6 @@
 import React from "react";
-import {fullName} from "../../../../../p3-assets/personalInfo"
-import {description} from "../../../../../p3-assets/personalInfo"
+import {fullName} from "../../../../../p2-assets/personalInfo"
+import {description} from "../../../../../p2-assets/personalInfo"
 import styles from "../home.module.scss"
 
 export const Data = () => {

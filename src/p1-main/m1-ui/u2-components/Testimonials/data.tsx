@@ -1,8 +1,8 @@
 import React from "react";
 import "./testimonials.css";
-import Image1 from "../../../../p3-assets/testimonial1.png"
-import Image2 from "../../../../p3-assets/testimonial2.png"
-import Image3 from "../../../../p3-assets/testimonial3.png"
+import Image1 from "../../../../p2-assets/testimonial1.png"
+import Image2 from "../../../../p2-assets/testimonial2.png"
+import Image3 from "../../../../p2-assets/testimonial3.png"
 
 export const testimonialsData = [
     {

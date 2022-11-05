@@ -1,6 +1,5 @@
 import React from "react";
-import {Works} from "./Works";
-
+import {Works} from "./w1-works/Works";
 
 export const Work = () => {
     return (

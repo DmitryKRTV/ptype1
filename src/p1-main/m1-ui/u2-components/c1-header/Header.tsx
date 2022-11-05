@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {nickName} from "../../../../p3-assets/personalInfo"
+import {nickName} from "../../../../p2-assets/personalInfo"
 import styles from "./header.module.scss"
 import {Link} from "./h1-link/Link";
 
