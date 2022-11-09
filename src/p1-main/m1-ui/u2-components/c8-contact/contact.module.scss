@@ -122,6 +122,12 @@
                 background-color: var(--body-color);
                 z-index: 10;
             }
+
+            .additional {
+                font-size: var(--small-font-size);
+                padding: 0 0 0 1rem;
+                margin: 5px 0 0 0;
+            }
         }
 
         .contact__form-area {
@@ -133,4 +139,12 @@
         }
 
     }
+
+    .error {
+        font-size: var(--small-font-size);
+        color: #A10000FF;
+        padding: 0 0 0 1rem;
+        margin: 5px 0 5px 0;
+    }
+
 }

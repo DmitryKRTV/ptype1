@@ -1,31 +1,49 @@
-import React, {useRef, useState} from "react";
-import emailjs from "@emailjs/browser";
-import {email} from "../../../../p2-assets/personalInfo"
-import {emailHref} from "../../../../p2-assets/personalInfo"
-import {skype} from "../../../../p2-assets/personalInfo"
-import {skypeHref} from "../../../../p2-assets/personalInfo"
-import {telegram} from "../../../../p2-assets/personalInfo"
-import {telegramHref} from "../../../../p2-assets/personalInfo"
+import React from "react";
+import {email, emailHref, skype, skypeHref, telegram, telegramHref} from "../../../../p2-assets/personalInfo"
 import styles from "./contact.module.scss"
 import {ContactCard} from "./c1-contactCard/ContactCard";
+import {useForm} from "react-hook-form";
+import {CustomTextField} from "../../../../p3-common/CustomTextField";
+import {yupResolver} from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import axios from "axios";
 
+const schema = yup.object({
+    userName: yup.string().required("Please, enter your name").min(2, "Name should have at least 2 characters"),                    //typeError('you must specify a number'),
+    message: yup.string().required("Please, enter your message").min(3, "Message should have at least 3 characters"),
+}).required();
 
 export const Contact = () => {
 
-    const [nameF, seNameF] = useState("");
-    const [emailF, seEmailF] = useState("");
-    const [messageF, seMessageF] = useState("");
+    const {control, formState: {errors}, reset, handleSubmit} = useForm<FormValues>({
+        mode: "onSubmit",
+        defaultValues: {
+            userName: "",
+            email: "",
+            message: "",
+        },
+        resolver: yupResolver(schema)
+    })
 
-    const form = useRef<any>();
+    const sendEmail = async (formData: { userName: string, email: string, message: string }) => {
+        try {
+            const data = {
+                service_id: "service_9ryyzse",
+                template_id: "template_yvr4ykd",
+                user_id: "GxyYPu0pIz4JHNRKt",
+                template_params: {
+                    name: formData.userName.trim(),
+                    email: formData.email ? formData.email.trim() : "",
+                    message: formData.message.trim()
+                },
+            }
 
-    const sendEmail = (e: any) => {
-        e.preventDefault();
-
-        emailjs.sendForm("service_9ryyzse", "template_yvr4ykd", form.current, "GxyYPu0pIz4JHNRKt")
-
-        seNameF("")
-        seEmailF("")
-        seMessageF("")
+            await axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
+            alert("Thank you, your message has been sent!")
+            reset()
+        } catch (e: any) {
+            alert("Some error occurred!")
+        }
     };
 
     return (
@@ -54,43 +72,48 @@ export const Contact = () => {
                 <div>
                     <h3 className={`${styles.contact__title}`}>Write me!</h3>
 
-                    <form className={`${styles.contact__form}`} ref={form} onSubmit={sendEmail}>
+                    <form className={`${styles.contact__form}`} onSubmit={handleSubmit(sendEmail)}>
                         <div className={`${styles["contact__form-div"]}`}>
-                            <label className={`${styles["contact__form-tag"]}`}>Name</label>
-                            <input type={"text"}
-                                   name={"name"}
-                                   className={`${styles["contact__form-input"]}`}
-                                   placeholder={"Insert your name"}
-                                   value={nameF}
-                                   onChange={(e) => {
-                                       seNameF(e.currentTarget.value)
-                                   }}
+                            <CustomTextField hookForm={{name: "userName", control: control}}
+                                             nativeMUIProps={
+                                                 {
+                                                     sx: {width: "100%"},
+                                                     label: "Your Name",
+                                                     error: !!errors.userName,
+                                                     placeholder: "Insert your name",
+                                                 }
+                                             }
                             />
+                            <div className={`${styles["error"]}`}>{errors.userName ? errors.userName.message : ""}</div>
                         </div>
                         <div className={`${styles["contact__form-div"]}`}>
-                            <label className={`${styles["contact__form-tag"]}`}>Email</label>
-                            <input type={"email"}
-                                   name={"email"}
-                                   className={`${styles["contact__form-input"]}`}
-                                   placeholder={"Insert your email"}
-                                   value={emailF}
-                                   onChange={(e) => {
-                                       seEmailF(e.currentTarget.value)
-                                   }}
+                            <CustomTextField hookForm={{name: "email", control: control}}
+                                             nativeMUIProps={
+                                                 {
+                                                     sx: {width: "100%"},
+                                                     label: "Your Email",
+                                                     placeholder: "Insert your email",
+                                                 }
+                                             }
                             />
+                            <div className={`${styles["additional"]}`}>Note that without your Email, I can't
+                                reply to you.
+                            </div>
                         </div>
                         <div className={`${styles["contact__form-div"]} ${styles["contact__form-area"]}`}>
-                            <label className={`${styles["contact__form-tag"]}`}>Message</label>
-                            <textarea name={"message"}
-                                      cols={30}
-                                      rows={10}
-                                      className={`${styles["contact__form-input"]}`}
-                                      placeholder={"Write your project"}
-                                      value={messageF}
-                                      onChange={(e) => {
-                                          seMessageF(e.currentTarget.value)
-                                      }}
-                            ></textarea>
+                            <CustomTextField hookForm={{name: "message", control: control}}
+                                             nativeMUIProps={
+                                                 {
+                                                     sx: {width: "100%"},
+                                                     label: "Your Message",
+                                                     placeholder: "Write here your message!",
+                                                     error: !!errors.message,
+                                                     multiline: true,
+                                                     rows: 6,
+                                                 }
+                                             }
+                            />
+                            <div className={`${styles["error"]}`}>{errors.message ? errors.message.message : ""}</div>
                         </div>
                         <button className="button button--flex" type={"submit"} value={"Send"}>
                             Send Message
@@ -118,4 +141,10 @@ export const Contact = () => {
             </div>
         </section>
     );
+};
+
+type FormValues = {
+    userName: string;
+    email: string;
+    message: string;
 };
