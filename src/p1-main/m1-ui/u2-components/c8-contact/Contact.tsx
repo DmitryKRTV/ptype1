@@ -1,12 +1,13 @@
 import React, {useRef, useState} from "react";
 import emailjs from "@emailjs/browser";
-import "./contact.css"
 import {email} from "../../../../p2-assets/personalInfo"
 import {emailHref} from "../../../../p2-assets/personalInfo"
 import {skype} from "../../../../p2-assets/personalInfo"
 import {skypeHref} from "../../../../p2-assets/personalInfo"
 import {telegram} from "../../../../p2-assets/personalInfo"
 import {telegramHref} from "../../../../p2-assets/personalInfo"
+import styles from "./contact.module.scss"
+import {ContactCard} from "./c1-contactCard/ContactCard";
 
 
 export const Contact = () => {
@@ -32,53 +33,33 @@ export const Contact = () => {
             <h2 className="section__title">Get in touch</h2>
             <span className="section__subtitle">Contact Me</span>
 
-            <div className="contact__container container grid">
-                <div className="contact__content">
-                    <h3 className="contact__title">Talk to me</h3>
-                    <div className="contact__info">
-                        <div className="contact__card">
-                            <i className="bx bx-mail-send contact__card-icon"></i>
-
-                            <h3 className="contact__card-title">Email</h3>
-                            <span className="contact__card-data">{email}</span>
-                            <a target={"_blank"} href={emailHref} className="contact__button">
-                                Write me
-                                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-                            </a>
-                        </div>
-                        <div className="contact__card">
-
-                            <i className="bx bxl-skype contact__card-icon"></i>
-                            <h3 className="contact__card-title">Skype</h3>
-                            <span className="contact__card-data">{skype}</span>
-
-                            <a target={"_blank"} href={skypeHref} className="contact__button">
-                                Write me
-                                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-                            </a>
-                        </div>
-                        <div className="contact__card">
-                            <i className="bx bxl-telegram contact__card-icon"></i>
-
-                            <h3 className="contact__card-title">Telegram</h3>
-                            <span className="contact__card-data">{telegram}</span>
-
-                            <a target={"_blank"} href={telegramHref} className="contact__button">
-                                Write me
-                                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-                            </a>
-                        </div>
+            <div className={`${styles.contact__container} container grid`}>
+                <div>
+                    <h3 className={`${styles.contact__title}`}>Talk to me</h3>
+                    <div className={`${styles.contact__info}`}>
+                        <ContactCard linkHref={emailHref}
+                                     title={"Email"}
+                                     cardData={email}
+                                     iconClass={"bx bx-mail-send"}/>
+                        <ContactCard linkHref={skypeHref}
+                                     title={"Skype"}
+                                     cardData={skype}
+                                     iconClass={"bx bxl-skype"}/>
+                        <ContactCard linkHref={telegramHref}
+                                     title={"Telegram"}
+                                     cardData={telegram}
+                                     iconClass={"bx bxl-telegram"}/>
                     </div>
                 </div>
-                <div className="contact__content">
-                    <h3 className="contact__title">Write me!</h3>
+                <div>
+                    <h3 className={`${styles.contact__title}`}>Write me!</h3>
 
-                    <form className="contact__form" ref={form} onSubmit={sendEmail}>
-                        <div className="contact__form-div">
-                            <label className="contact__form-tag">Name</label>
+                    <form className={`${styles.contact__form}`} ref={form} onSubmit={sendEmail}>
+                        <div className={`${styles["contact__form-div"]}`}>
+                            <label className={`${styles["contact__form-tag"]}`}>Name</label>
                             <input type={"text"}
                                    name={"name"}
-                                   className={"contact__form-input"}
+                                   className={`${styles["contact__form-input"]}`}
                                    placeholder={"Insert your name"}
                                    value={nameF}
                                    onChange={(e) => {
@@ -86,11 +67,11 @@ export const Contact = () => {
                                    }}
                             />
                         </div>
-                        <div className="contact__form-div">
-                            <label className="contact__form-tag">Email</label>
+                        <div className={`${styles["contact__form-div"]}`}>
+                            <label className={`${styles["contact__form-tag"]}`}>Email</label>
                             <input type={"email"}
                                    name={"email"}
-                                   className={"contact__form-input"}
+                                   className={`${styles["contact__form-input"]}`}
                                    placeholder={"Insert your email"}
                                    value={emailF}
                                    onChange={(e) => {
@@ -98,12 +79,12 @@ export const Contact = () => {
                                    }}
                             />
                         </div>
-                        <div className="contact__form-div contact__form-area">
-                            <label className="contact__form-tag">Message</label>
+                        <div className={`${styles["contact__form-div"]} ${styles["contact__form-area"]}`}>
+                            <label className={`${styles["contact__form-tag"]}`}>Message</label>
                             <textarea name={"message"}
                                       cols={30}
                                       rows={10}
-                                      className={"contact__form-input"}
+                                      className={`${styles["contact__form-input"]}`}
                                       placeholder={"Write your project"}
                                       value={messageF}
                                       onChange={(e) => {
