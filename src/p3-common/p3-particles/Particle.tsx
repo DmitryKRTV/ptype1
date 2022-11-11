@@ -100,12 +100,10 @@ export const Particle = () => {
                             "resize": true
                         },
                         "modes": {
-                            "connect": {
-                                "distance": 400,
-                            },
+                            "connect": {},
                             "repulse": {
                                 "distance": 200,
-                                "duration": 2.5,
+                                "duration": 10,
                                 "speed": 1
                             },
 
