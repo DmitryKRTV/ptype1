@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import "./scrollUp.css"
+import styles from "./scrollUp.module.scss"
 
 export const ScrollUp = () => {
 
@@ -11,18 +11,18 @@ export const ScrollUp = () => {
     }, []);
 
 
-    const scrollUpCallback = (e: any) => {
-        const scrollUp = document.querySelector(".scrollUp")
+    const scrollUpCallback = () => {
+        const scrollUp = document.querySelector("#scrollUp")
         if (window.scrollY >= 560 && scrollUp) {
-            scrollUp.classList.add("show-scroll")
+            scrollUp.classList.add(`${styles["show-scroll"]}`)
         } else if (window.scrollY < 560 && scrollUp) {
-            scrollUp.classList.remove("show-scroll")
+            scrollUp.classList.remove(`${styles["show-scroll"]}`)
         }
     }
 
     return (
-        <a href="#" className="scrollUp">
-            <i className="uil uil-arrow-up scrollUp_icon"></i>
+        <a href="#" className={`${styles.scrollUp}`} id={"scrollUp"}>
+            <i className={`uil uil-arrow-up ${styles["scrollUp_icon"]}`}></i>
         </a>
     );
 };

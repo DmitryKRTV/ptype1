@@ -14,7 +14,7 @@
     --title-color-dark: hsl(var(--hue), var(--sat), 0%);
     --text-color: hsl(var(--hue), var(--sat), 46%);
     --body-color: hsl(var(--hue), var(--sat), 98%);
-    --container-color: #fff;
+    --container-color: #ffffff;
 
     /* Font and typography */
     --body-font: "Poppins", sans-serif;
@@ -54,6 +54,14 @@
     --profile-img: url("../../../p2-assets/myphotoHome.jpg");
     --about-img: url("../../../p2-assets/myphoto.jpg");
 
+}
+
+/*  Change autofill color  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #f9f9f9 inset !important;
 }
 
 /* Responsive typography */

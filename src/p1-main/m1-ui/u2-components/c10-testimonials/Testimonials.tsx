@@ -1,15 +1,11 @@
 import React from "react";
-import "./testimonials.css";
+import styles from "./testimonials.module.scss"
 import {testimonialsData} from "./data"
 // Import Swiper React u2-components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // import required modules
-import { Pagination } from "swiper";
+import {Pagination} from "swiper";
 
 
 export const Testimonials = () => {
@@ -19,7 +15,7 @@ export const Testimonials = () => {
             <h2 className="section__title">My clients say</h2>
             <span className="section__subtitle">Testimonial</span>
 
-            <Swiper className="testimonial__container"
+            <Swiper className={`${styles.testimonial__container}`}
                     loop={true}
                     grabCursor={true}
                     spaceBetween={24}
@@ -36,16 +32,16 @@ export const Testimonials = () => {
                         },
                     }}
                     modules={[Pagination]}>
-                {testimonialsData.map(({id, image, title, description}, index)=>{
+                {testimonialsData.map(({id, image, title, description}, index) => {
                     return (
-                        <SwiperSlide className={"testimonial__card"}
+                        <SwiperSlide className={`${styles.testimonial__card}`}
                                      key={index}>
-                            <img src={image} alt="profileImg" className={"testimonial__img"}/>
-                            <h3 className="testimonial__name">{title}</h3>
-                            <p className="testimonial__description">{description}</p>
+                            <img src={image} alt="profileImg" className={`${styles.testimonial__img}`}/>
+                            <h3 className={`${styles.testimonial__name}`}>{title}</h3>
+                            <p className={`${styles.testimonial__description}`}>{description}</p>
                         </SwiperSlide>
                     )
-                } )}
+                })}
             </Swiper>
 
         </section>

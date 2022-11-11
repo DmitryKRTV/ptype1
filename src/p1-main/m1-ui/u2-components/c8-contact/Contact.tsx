@@ -3,7 +3,7 @@ import {email, emailHref, skype, skypeHref, telegram, telegramHref} from "../../
 import styles from "./contact.module.scss"
 import {ContactCard} from "./c1-contactCard/ContactCard";
 import {useForm} from "react-hook-form";
-import {CustomTextField} from "../../../../p3-common/CustomTextField";
+import {CustomTextField} from "../../../../p3-common/c1-customTextField/CustomTextField";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";

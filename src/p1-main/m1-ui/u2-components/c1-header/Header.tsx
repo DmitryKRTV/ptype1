@@ -34,7 +34,7 @@ export const Header = () => {
             <nav className={`${styles.nav} container`}>
                 <a href="#" className={`${styles["nav__logo"]}`}>{nickName}</a>
                 <div className={toggle ? `${styles["nav__menu"]} ${styles["show-menu"]}` : `${styles["nav__menu"]}`}>
-                    <ul className={`${styles["nav__list"]} grid`}>
+                    <ul className={`${styles["nav__list"]}`}>
                         <Link refer={"#home"}
                               setActiveNav={setActiveNav}
                               activeNav={activeNav}

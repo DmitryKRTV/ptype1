@@ -6,8 +6,8 @@ import {About} from "../u2-components/c3-about/About";
 import {Services} from "../u2-components/c5-services/Services";
 import {Qualification} from "../u2-components/c6-qualification/Qualification";
 import {Contact} from "../u2-components/c8-contact/Contact";
-import {Footer} from "../u2-components/Footer/Footer";
-import {ScrollUp} from "../u2-components/ScrollUp/ScrollUp";
+import {Footer} from "../u2-components/c9-footer/Footer";
+import {ScrollUp} from "../../../p3-common/c2-scrollUp/ScrollUp";
 import {SkillsBar} from "../u2-components/c4-skills/SkillsBar";
 import {Work} from "../u2-components/c7-work/Work";
 

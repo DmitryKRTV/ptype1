@@ -1,0 +1,46 @@
+.scrollUp {
+    position: fixed;
+    right: 2.5rem;
+    bottom: -20%;
+    background-color: var(--title-color);
+    opacity: 0.8;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+
+    &:hover {
+        background-color: var(--title-color-dark);
+    }
+
+    @media screen and (max-width: 992px) {
+        right: 1.5rem;
+        padding: 0.25rem 0.4rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: -20%;
+    }
+
+    @media screen and (max-width: 350px) {
+        right: 1rem;
+    }
+
+    .scrollUp_icon {
+        font-size: 1.5rem;
+        color: var(--container-color);
+
+        @media screen and (max-width: 992px) {
+            font-size: 1.25rem;
+        }
+        
+    }
+}
+
+.show-scroll {
+    bottom: 3rem;
+
+    @media screen and (max-width: 768px) {
+        bottom: 4rem;
+    }
+}
