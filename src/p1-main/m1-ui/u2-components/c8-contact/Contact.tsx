@@ -96,7 +96,7 @@ export const Contact = () => {
                                                  }
                                              }
                             />
-                            <div className={`${styles["additional"]}`}>Note that without your Email, I can't
+                            <div className={`${styles["additional"]}`}>Note! Without your Email, I can't
                                 reply to you.
                             </div>
                         </div>
