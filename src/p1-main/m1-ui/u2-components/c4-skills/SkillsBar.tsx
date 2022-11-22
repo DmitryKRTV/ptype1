@@ -4,6 +4,7 @@ import s from "./SkillsBar.module.scss"
 import {useSelector} from "react-redux";
 import {AppRootState} from "../../../m2-bll/redux/store";
 import {SkillType} from "../../../m2-bll/redux/skills-reducer";
+import {Fade} from "react-awesome-reveal";
 
 
 export const SkillsBar = () => {
@@ -20,13 +21,15 @@ export const SkillsBar = () => {
 
     return (
         <section className={"skills section"} id={"skills"}>
-            <h2 className="section__title">Skills</h2>
-            <span className="section__subtitle">My technical level</span>
-            <div className={`container`}>
-                <div className={s["skills__container"]}>
-                    {finalSkills}
+            <Fade direction={"left"} triggerOnce={true}>
+                <h2 className="section__title">Skills</h2>
+                <span className="section__subtitle">My technical level</span>
+                <div className={`container`}>
+                    <div className={s["skills__container"]}>
+                        {finalSkills}
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </section>
     )
 };

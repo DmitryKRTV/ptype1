@@ -1,29 +1,29 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {nickName} from "../../../../p2-assets/personalInfo"
 import styles from "./header.module.scss"
-import {Link} from "./h1-link/Link";
+import {CustomLink} from "./h1-customLink/CustomLink";
 
 
 export const Header = () => {
 
     const [toggle, setToggle] = useState<boolean>(false);
-    const [activeNav, setActiveNav] = useState<linksType>("#home");
+    // const [activeNav, setActiveNav] = useState<linksType>("home");
 
-    useEffect(() => {
-        document.addEventListener("scroll", scrollHandler)
-        return () => {
-            document.removeEventListener("scroll", scrollHandler)
-        };
-    }, []);
-
-    const scrollHandler = () => {
-        const header = document.querySelector(`#header`)
-        if (window.scrollY >= 80 && header) {
-            header.classList.add(`${styles["scroll-header"]}`)
-        } else if (window.scrollY < 80 && header) {
-            header.classList.remove(`${styles["scroll-header"]}`)
-        }
-    }
+    // useEffect(() => {
+    //     document.addEventListener("scroll", scrollHandler)
+    //     return () => {
+    //         document.removeEventListener("scroll", scrollHandler)
+    //     };
+    // }, []);
+    //
+    // const scrollHandler = () => {
+    //     const header = document.querySelector(`#header`)
+    //     if (window.scrollY >= 80 && header) {
+    //         header.classList.add(`${styles["scroll-header"]}`)
+    //     } else if (window.scrollY < 80 && header) {
+    //         header.classList.remove(`${styles["scroll-header"]}`)
+    //     }
+    // }
 
     const toggleMenuCB = () => {
         setToggle(!toggle)
@@ -35,46 +35,34 @@ export const Header = () => {
                 <a href="#" className={`${styles["nav__logo"]}`}>{nickName}</a>
                 <div className={toggle ? `${styles["nav__menu"]} ${styles["show-menu"]}` : `${styles["nav__menu"]}`}>
                     <ul className={`${styles["nav__list"]}`}>
-                        <Link refer={"#home"}
-                              setActiveNav={setActiveNav}
-                              activeNav={activeNav}
-                              iconClass={`uil uil-estate`}
-                              title={"Home"}
+                        <CustomLink refer={"home"}
+                                    iconClass={`uil uil-estate`}
+                                    title={"Home"}
                         />
 
-                        <Link refer={"#about"}
-                              setActiveNav={setActiveNav}
-                              activeNav={activeNav}
-                              iconClass={`uil uil-user`}
-                              title={"About"}
+                        <CustomLink refer={"about"}
+                                    iconClass={`uil uil-user`}
+                                    title={"About"}
                         />
 
-                        <Link refer={"#skills"}
-                              setActiveNav={setActiveNav}
-                              activeNav={activeNav}
-                              iconClass={`uil uil-file-alt`}
-                              title={"Skills"}
+                        <CustomLink refer={"skills"}
+                                    iconClass={`uil uil-file-alt`}
+                                    title={"Skills"}
                         />
 
-                        <Link refer={"#services"}
-                              setActiveNav={setActiveNav}
-                              activeNav={activeNav}
-                              iconClass={`uil uil-briefcase-alt`}
-                              title={"Services"}
+                        <CustomLink refer={"services"}
+                                    iconClass={`uil uil-briefcase-alt`}
+                                    title={"Services"}
                         />
 
-                        <Link refer={"#portfolio"}
-                              setActiveNav={setActiveNav}
-                              activeNav={activeNav}
-                              iconClass={`uil uil-scenery`}
-                              title={"Portfolio"}
+                        <CustomLink refer={"portfolio"}
+                                    iconClass={`uil uil-scenery`}
+                                    title={"Portfolio"}
                         />
 
-                        <Link refer={"#contact"}
-                              setActiveNav={setActiveNav}
-                              activeNav={activeNav}
-                              iconClass={`uil uil-message`}
-                              title={"Contact"}
+                        <CustomLink refer={"contact"}
+                                    iconClass={`uil uil-message`}
+                                    title={"Contact"}
                         />
 
                     </ul>
@@ -90,4 +78,4 @@ export const Header = () => {
     );
 };
 
-export type linksType = "#home" | "#about" | "#skills" | "#services" | "#portfolio" | "#contact"
+export type linksType = "home" | "about" | "skills" | "services" | "portfolio" | "contact"
