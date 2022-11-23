@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "../home.module.scss"
+import Scroll, {Link} from "react-scroll";
 
 
 export const ScrollDown = () => {
 
+    let scroll = Scroll.animateScroll;
+
     return (
         <div className={`${styles.home__scroll}`}>
-            <a href={`#about`} className="button--flex">
+            <Link to={`about`} smooth={true} duration={500} className="button--flex">
                 <svg
                     width="32px"
                     height="32px"
@@ -44,7 +47,7 @@ export const ScrollDown = () => {
                 </svg>
                 <span className={`${styles["home__scroll-name"]}`}>Scroll Down</span>
                 <i className={`uil uil-arrow-down ${styles["home__scroll-arrow"]}`}></i>
-            </a>
+            </Link>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.scss"
+import {Link} from "react-scroll";
 
 export const Footer = () => {
     return (
@@ -9,10 +10,10 @@ export const Footer = () => {
 
                 <ul className={`${styles.footer__list}`}>
                     <li>
-                        <a href={"#about"} className={`${styles.footer__link}`}>About</a>
+                        <Link to={"about"} smooth={true} className={`${styles.footer__link}`}>About</Link>
                     </li>
                     <li>
-                        <a href={"#portfolio"} className={`${styles.footer__link}`}>Projects</a>
+                        <Link to={"portfolio"} smooth={true} className={`${styles.footer__link}`}>Projects</Link>
                     </li>
                     {/*<li>*/}
                     {/*    <a href="#testimonials" className="footer__link">Testimonials</a>*/}

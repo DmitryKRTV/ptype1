@@ -2,12 +2,22 @@ import React, {MouseEvent} from "react";
 import {ModalToggleType, ServicesDataType} from "../Services";
 import styles from "../services.module.scss"
 
+
 export const ServiceContent = ({
                                    toggleModal,
                                    setToggleModal,
                                    closeModal,
                                    serviceData,
                                }: ServiceContentType) => {
+
+    const handleClose = (e: MouseEvent<HTMLDivElement>) => {
+        closeModal(e)
+    }
+
+    const handleModalHost = (e: MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation();
+    }
+
     return (
         <div className={`${styles["services__content"]}`}>
             <div>
@@ -24,8 +34,9 @@ export const ServiceContent = ({
                         <i className={`uil uil-arrow-right ${styles["services__button-icon"]}`}></i>
                     </span>
             <div
-                className={toggleModal === serviceData.toggleModalStatic ? `${styles.services__modal} ${styles["active-modal"]}` : `${styles.services__modal}`}>
-                <div className={`${styles["services__modal-content"]}`} onClick={closeModal}>
+                className={toggleModal === serviceData.toggleModalStatic ? `${styles.services__modal} ${styles["active-modal"]}` : `${styles.services__modal}`}
+                onClick={handleClose}>
+                <div className={`${styles["services__modal-content"]}`} onClick={handleModalHost}>
                     <i className={`uil uil-times ${styles["services__modal-close"]}`} onClick={closeModal}></i>
                     <h3 className={`${styles["services__modal-title"]}`}>{serviceData.title}</h3>
                     <p className={`${styles["services__modal-description"]}`}>
@@ -46,7 +57,6 @@ export const ServiceContent = ({
         </div>
     );
 };
-
 type ServiceContentType = {
     toggleModal: ModalToggleType
     setToggleModal: (value: ModalToggleType) => void

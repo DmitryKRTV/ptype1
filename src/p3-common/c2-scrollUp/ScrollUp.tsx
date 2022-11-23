@@ -1,7 +1,10 @@
 import React, {useEffect} from "react";
 import styles from "./scrollUp.module.scss"
+import Scroll from "react-scroll";
 
 export const ScrollUp = () => {
+
+    let scroll = Scroll.animateScroll;
 
     useEffect(() => {
         document.addEventListener("scroll", scrollUpCallback)
@@ -21,7 +24,9 @@ export const ScrollUp = () => {
     }
 
     return (
-        <a href="#" className={`${styles.scrollUp}`} id={"scrollUp"}>
+        <a onClick={() => {
+            scroll.scrollToTop()
+        }} className={`${styles.scrollUp}`} id={"scrollUp"}>
             <i className={`uil uil-arrow-up ${styles["scrollUp_icon"]}`}></i>
         </a>
     );

@@ -2,6 +2,7 @@ import React from "react";
 import {fullName} from "../../../../../p2-assets/personalInfo"
 import {description} from "../../../../../p2-assets/personalInfo"
 import styles from "../home.module.scss"
+import {Link} from "react-scroll";
 
 export const Data = () => {
     return (
@@ -14,7 +15,7 @@ export const Data = () => {
             <p className={`${styles.home__description}`}>
                 {description}
             </p>
-            <a href={`#contact`} className="button button--flex">
+            <Link to={`contact`} smooth={true} className="button button--flex">
                 Say Hello
                 <svg
                     className="button__icon"
@@ -33,7 +34,7 @@ export const Data = () => {
                         fill="var(--container-color)"
                     ></path>
                 </svg>
-            </a>
+            </Link>
         </div>
     );
 };

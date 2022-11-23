@@ -20,10 +20,12 @@ function App() {
                 <Home/>
                 <About/>
                 <SkillsBar/>
-                <Services/>
-                <Qualification/>
+                <div id={"services"}>   {/* Avoiding an issue of disappearing active link on Qualification component */}
+                    <Services/>
+                    <Qualification/>
+                </div>
                 <Work/>
-                {/*<Testimonials/>*/}
+                {/*<Testimonials/>*/} {/* Created, but temporary unused component */}
                 <Contact/>
             </main>
             <Footer/>

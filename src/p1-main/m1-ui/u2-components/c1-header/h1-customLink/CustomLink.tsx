@@ -17,7 +17,7 @@ export const CustomLink = ({refer, iconClass, title}: LinkProps) => {
                   to={`${refer}`}
                   spy={true}
                   smooth={true}
-                  offset={1}
+                  offset={-30}
                   duration={500}
                   isDynamic={true}>
                 <i className={`${iconClass} ${styles["nav__icon"]}`}></i>{title}

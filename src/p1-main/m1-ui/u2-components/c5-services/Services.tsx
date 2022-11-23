@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import styles from "./services.module.scss"
 import {ServiceContent} from "./s1-serviceContent/ServiceContent";
+import {CustomModal} from "../../../../p3-common/c4-customModal/CustomModal";
+import {CustomServiceContent} from "./s1-serviceContent/CustomServiceContent";
 
 const servicesData: ServicesDataType[] = [
     {
@@ -49,6 +51,7 @@ const servicesData: ServicesDataType[] = [
     }
 ]
 
+
 export const Services = () => {
 
     const [toggleModal, setToggleModal] = useState<ModalToggleType>(0);
@@ -58,7 +61,7 @@ export const Services = () => {
     }
 
     return (
-        <section className={"services section"} id={"services"}>
+        <section className={"services section"}>
             <h2 className="section__title">Services</h2>
             <span className="section__subtitle">My responsibilities</span>
 
