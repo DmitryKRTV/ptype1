@@ -1,9 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Work1 from "../../../../../p2-assets/work1.jpg"
-import Work2 from "../../../../../p2-assets/work2.jpg"
-import Work3 from "../../../../../p2-assets/work3.jpg"
-import Work4 from "../../../../../p2-assets/work4.jpg"
-import Work5 from "../../../../../p2-assets/work5.jpg"
+import Work1 from "../../../../../p2-assets/packScreen.png"
 import {WorkItems} from "./w1-workItems/WorkItems";
 import styles from "../work.module.scss"
 
@@ -11,46 +7,30 @@ const projectsData: DataItemType[] = [
     {
         id: 1,
         image: Work1,
-        title: "Web design",
+        title: "Card application",
         category: "web",
-    },
-    {
-        id: 2,
-        image: Work2,
-        title: "App movil",
-        category: "app",
-    },
-    {
-        id: 3,
-        image: Work3,
-        title: "Brand design",
-        category: "design",
-    },
-    {
-        id: 4,
-        image: Work4,
-        title: "App movil",
-        category: "app",
-    },
-    {
-        id: 5,
-        image: Work5,
-        title: "Web design",
-        category: "web",
+        stack: "React, Redux, Redux-Thunk, Formik , MaterialUI",
+        description: "This app allows you to create and manage packs with cards in order to practice, study or just remember the information that you want.",
+        githubLink: "https://github.com/EdmondDantess/project_friday",
+        link: "https://edmonddantess.github.io/project_friday",
     },
 ];
 
 export type DataItemType = {
     id: number
     image: string
-    title: string
     category: string
+    title: string
+    stack: string
+    description: string
+    githubLink: string
+    link: string
 }
 
-const projectsNav: NavItemType[] = [{name: "all"}, {name: "web"}, {name: "app"}, {name: "design"}]
+const projectsNav: NavItemType[] = [{name: "all"}, {name: "web"}]
 
 type NavItemType = {
-    name: "all" | "web" | "app" | "design"
+    name: "all" | "web"
 }
 
 export const Works = () => {

@@ -176,6 +176,7 @@ img {
 
 /* BUTTONS */
 .button {
+    cursor: pointer;
     display: inline-block;
     background-color: var(--title-color);
     color: var(--container-color);

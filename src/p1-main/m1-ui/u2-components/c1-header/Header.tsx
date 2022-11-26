@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {nickName} from "../../../../p2-assets/personalInfo"
 import styles from "./header.module.scss"
 import {CustomLink} from "./h1-customLink/CustomLink";
@@ -9,21 +9,21 @@ export const Header = () => {
     const [toggle, setToggle] = useState<boolean>(false);
     // const [activeNav, setActiveNav] = useState<linksType>("home");
 
-    // useEffect(() => {
-    //     document.addEventListener("scroll", scrollHandler)
-    //     return () => {
-    //         document.removeEventListener("scroll", scrollHandler)
-    //     };
-    // }, []);
-    //
-    // const scrollHandler = () => {
-    //     const header = document.querySelector(`#header`)
-    //     if (window.scrollY >= 80 && header) {
-    //         header.classList.add(`${styles["scroll-header"]}`)
-    //     } else if (window.scrollY < 80 && header) {
-    //         header.classList.remove(`${styles["scroll-header"]}`)
-    //     }
-    // }
+    useEffect(() => {
+        document.addEventListener("scroll", scrollHandler)
+        return () => {
+            document.removeEventListener("scroll", scrollHandler)
+        };
+    }, []);
+
+    const scrollHandler = () => {
+        const header = document.querySelector(`#header`)
+        if (window.scrollY >= 80 && header) {
+            header.classList.add(`${styles["scroll-header"]}`)
+        } else if (window.scrollY < 80 && header) {
+            header.classList.remove(`${styles["scroll-header"]}`)
+        }
+    }
 
     const toggleMenuCB = () => {
         setToggle(!toggle)
