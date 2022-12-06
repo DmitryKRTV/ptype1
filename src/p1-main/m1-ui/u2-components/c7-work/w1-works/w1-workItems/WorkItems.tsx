@@ -15,18 +15,18 @@ const dialogStyles = {
 
 const imgBoxStyle = {
     height: {
-        xs: 100,
-        sm: 126,
-        md: 226,
-        lg: 310,
-        xl: 450,
+        xs: 94,
+        sm: 118,
+        md: 214,
+        lg: 294,
+        xl: 398,
     },
     width: {
         xs: 200,
         sm: 250,
         md: 450,
         lg: 620,
-        xl: 900,
+        xl: 836,
     },
     display: "block",
     margin: "0 auto"
