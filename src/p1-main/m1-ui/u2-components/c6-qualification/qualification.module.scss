@@ -58,6 +58,7 @@
         display: grid;
         grid-template-columns: 0.5fr;
         justify-content: center;
+        width: 100%;
 
         @media screen and (max-width: 576px) {
             grid-template-columns: initial;

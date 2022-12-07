@@ -52,7 +52,7 @@ export const Contact = () => {
             <span className="section__subtitle">Contact Me</span>
 
             <div className={`${styles.contact__container} container grid`}>
-                <div>
+                <div className={`${styles.cards__container}`}>
                     <h3 className={`${styles.contact__title}`}>Talk to me</h3>
                     <div className={`${styles.contact__info}`}>
                         <ContactCard linkHref={emailHref}

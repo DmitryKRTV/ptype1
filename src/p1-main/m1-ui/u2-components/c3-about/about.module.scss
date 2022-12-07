@@ -61,6 +61,7 @@
             .about__box {
                 text-align: start;
                 padding-top: var(--mb-0-75);
+                width: 100%;
                 @media screen and (max-width: 992px) {
                     &:first-child {
                         text-align: end;
