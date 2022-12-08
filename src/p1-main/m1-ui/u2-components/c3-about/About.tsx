@@ -19,9 +19,12 @@ export const About = () => {
                     </div>
                     <div className={`${styles.about__data}`}>
                         <Info/>
-                        <p className={`${styles.about__description}`}>
-                            {aboutDescription}
-                        </p>
+                        <div className={`${styles.description__container}`}>
+                            <p className={`${styles.about__description}`}>
+                                {aboutDescription}
+                            </p>
+                        </div>
+
                         <a download={""} href={CV} className="button button--flex">
                             Download CV
                             <svg

@@ -20,7 +20,7 @@ export const ServiceContent = ({
 
     return (
         <div className={`${styles["services__content"]}`}>
-            <div>
+            <div className={`${styles["title__container"]}`}>
                 <i className={`${serviceData.icon} ${styles["services__icon"]}`}></i>
                 <h3 className={styles.services__title}>
                     {serviceData.title}
