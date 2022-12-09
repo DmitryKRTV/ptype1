@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import styles from "./services.module.scss"
 import {ServiceContent} from "./s1-serviceContent/ServiceContent";
-import {CustomModal} from "../../../../p3-common/c4-customModal/CustomModal";
-import {CustomServiceContent} from "./s1-serviceContent/CustomServiceContent";
 
 const servicesData: ServicesDataType[] = [
     {

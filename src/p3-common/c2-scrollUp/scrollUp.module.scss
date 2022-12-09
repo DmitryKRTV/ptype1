@@ -13,6 +13,12 @@
         background-color: var(--title-color-dark);
     }
 
+    @media (hover: none) {
+        &:hover {
+            background-color: var(--title-color);
+        }
+    }
+
     @media screen and (max-width: 992px) {
         right: 1.5rem;
         padding: 0.25rem 0.4rem;
@@ -33,7 +39,7 @@
         @media screen and (max-width: 992px) {
             font-size: 1.25rem;
         }
-        
+
     }
 }
 

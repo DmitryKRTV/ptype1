@@ -42,8 +42,6 @@ export const WorkItems = ({item}: WorkItemsType) => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    // const [maxWidth, setMaxWidth] = React.useState<DialogProps["maxWidth"]>("xl");
-
     return (
         <div className={`${styles.work__card}`}>
             <img src={item.image} alt="Work Image" className={`${styles.work__img}`}/>

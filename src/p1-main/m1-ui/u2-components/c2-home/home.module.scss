@@ -39,6 +39,14 @@
         }
     }
 
+    @media (hover: none) {
+        &:hover {
+            .home__scroll-arrow {
+                transform: none;
+            }
+        }
+    }
+
 }
 
 .home__content {
@@ -72,6 +80,13 @@
             &:hover {
                 color: var(--title-color-dark);
                 transform: scale(1.2);
+            }
+
+            @media (hover: none) {
+                &:hover {
+                    color: var(--title-color);
+                    transform: none;
+                }
             }
         }
     }

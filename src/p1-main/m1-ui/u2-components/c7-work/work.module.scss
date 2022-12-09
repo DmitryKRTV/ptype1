@@ -26,6 +26,13 @@
             background-color: var(--title-color);
             color: var(--container-color);
         }
+
+        @media (hover: none) {
+            &:hover {
+                background-color: var(--title-color);
+                color: var(--container-color);
+            }
+        }
     }
 
     .work__item-active {
@@ -84,6 +91,12 @@
 
             &:hover .work__button-icon {
                 transform: translateX(0.25rem);
+            }
+
+            @media (hover: none) {
+                &:hover {
+                    transform: none;
+                }
             }
         }
 

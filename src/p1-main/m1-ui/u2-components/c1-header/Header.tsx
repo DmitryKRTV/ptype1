@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {nickName} from "../../../../p2-assets/personalInfo"
 import styles from "./header.module.scss"
 import {CustomLink} from "./h1-customLink/CustomLink";
+import {Link} from "react-scroll";
 
 
 export const Header = () => {
@@ -32,7 +33,14 @@ export const Header = () => {
     return (
         <header className={styles.header} id={"header"}>
             <nav className={`${styles.nav} container`}>
-                <a href="#" className={`${styles["nav__logo"]}`}>{nickName}</a>
+                <Link activeClass={`${styles["active"]}`}
+                      to={`home`}
+                      smooth={true}
+                      duration={1000}
+                      className={`${styles["nav__logo"]}`}
+                >
+                    {nickName}
+                </Link>
                 <div className={toggle ? `${styles["nav__menu"]} ${styles["show-menu"]}` : `${styles["nav__menu"]}`}>
                     <ul className={`${styles["nav__list"]}`}>
                         <CustomLink refer={"home"}

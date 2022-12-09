@@ -10,31 +10,19 @@ type LinkProps = {
 }
 
 export const CustomLink = ({refer, iconClass, title}: LinkProps) => {
-
     return (
         <li className={`${styles["nav_item"]}`}>
             <Link activeClass={`${styles["active"]}`}
                   to={`${refer}`}
                   spy={true}
                   smooth={true}
-                  offset={-30}
+                  offset={-80}
                   duration={500}
                   isDynamic={true}
                   className={`${styles["link"]}`}
             >
                 <i className={`${iconClass} ${styles["nav__icon"]}`}></i>{title}
             </Link>
-            {/*<a href={`${refer}`}*/}
-            {/*   onClick={() => {*/}
-            {/*       setActiveNav(refer)*/}
-            {/*   }}*/}
-            {/*   className={activeNav === `${refer}`*/}
-            {/*       ? `${styles["nav__link"]} ${styles["active-link"]}`*/}
-            {/*       : `${styles["nav__link"]}`*/}
-            {/*   }*/}
-            {/*>*/}
-            {/*    <i className={`${iconClass} ${styles["nav__icon"]}`}></i>{title}*/}
-            {/*</a>*/}
         </li>
     );
 };

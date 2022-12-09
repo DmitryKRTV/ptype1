@@ -129,6 +129,12 @@ img {
 
 /* REUSABLE CSS CLASSES */
 .section {
+    width: 100%;
+    padding: 4rem 0 2rem;
+}
+
+.section-home {
+    width: 100%;
     padding: 6rem 0 2rem;
 }
 
@@ -188,6 +194,12 @@ img {
 
 .button:hover {
     background-color: var(--title-color-dark);
+}
+
+@media (hover: none) {
+    .button:hover {
+        background-color: var(--title-color);
+    }
 }
 
 .button__icon {

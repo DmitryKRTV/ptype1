@@ -47,6 +47,14 @@
                     transform: translateX(00.25rem);
                 }
             }
+
+            @media (hover: none) {
+                &:hover {
+                    .services__button-icon {
+                        transform: none;
+                    }
+                }
+            }
         }
 
         .services__modal {

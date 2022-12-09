@@ -31,6 +31,13 @@
                 background-color: var(--title-color-dark);
             }
 
+            @media (hover: none) {
+                &:hover {
+                    color: var(--container-color);
+                    background-color: var(--body-color);
+                }
+            }
+
             @media screen and (max-width: 576px) {
                 margin: 0 var(--mb-0-75);
             }

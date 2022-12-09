@@ -6,7 +6,7 @@ import styles from "./home.module.scss"
 
 export const Home = () => {
     return (
-        <div className="home section" id="home">
+        <div className={`home section-home`} id="home">
             {/*<Particle/>*/}
             {/*<ParticleCollision/>*/}
             <div className="container">

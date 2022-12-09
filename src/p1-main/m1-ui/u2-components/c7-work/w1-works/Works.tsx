@@ -57,22 +57,6 @@ export const Works = () => {
         }
     }, [items]);
 
-    // useEffect(() => {
-    //     const arr = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 3, 4, 5, 1, 1, 1, 2, 2, 3, 4, 5]
-    //
-    //     const arrSet = (arr: any) => {
-    //         const obj = arr.reduce((acc: any, el: any) => {
-    //             acc[el] = (acc[el] || 0) + 1
-    //             return acc
-    //         }, {})
-    //         console.log(obj)
-    //         return Object.keys(obj).sort((a: any, b: any) => obj[b] - obj[a])
-    //     }
-    //
-    //     console.log(arrSet(arr))
-    // }, []);
-
-
     const onWorkTypeChanged = (itemsType: NavItemType) => {
         return () => setItems(itemsType)
     }
