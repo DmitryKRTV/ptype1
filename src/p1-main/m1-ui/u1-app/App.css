@@ -129,12 +129,10 @@ img {
 
 /* REUSABLE CSS CLASSES */
 .section {
-    width: 100%;
     padding: 4rem 0 2rem;
 }
 
 .section-home {
-    width: 100%;
     padding: 6rem 0 2rem;
 }
 
@@ -144,14 +142,19 @@ img {
 }
 
 .section__subtitle {
-    display: block;
     font-size: var(--small-font-size);
     margin-bottom: 4rem;
 }
 
 .section__title,
 .section__subtitle {
+    display: block;
+    width: 100%;
     text-align: center;
+}
+
+.main {
+    width: 100%;
 }
 
 /* LAYOUT */

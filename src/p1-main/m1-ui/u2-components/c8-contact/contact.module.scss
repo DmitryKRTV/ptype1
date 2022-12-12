@@ -17,6 +17,10 @@
         width: 100%;
     }
 
+    .form__container {
+        width: 100%;
+    }
+
     .contact__title {
         text-align: center;
         font-size: var(--h3-font-size);
@@ -56,6 +60,7 @@
             }
 
             .contact__card-title {
+                display: block;
                 width: 100%;
                 font-weight: var(--font-medium);
             }

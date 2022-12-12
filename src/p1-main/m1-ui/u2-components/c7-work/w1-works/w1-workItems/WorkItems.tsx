@@ -1,10 +1,10 @@
 import React from "react";
 import {DataItemType} from "../Works";
 import styles from "../../work.module.scss"
-import {Box, DialogContent, ThemeProvider, Typography} from "@mui/material";
+import {Box, DialogActions, DialogContent, ThemeProvider, Typography} from "@mui/material";
 import {customTheme} from "../../../../../../p3-common/c5-MUITheme/styles";
-import {CustomDialog} from "../../../../../../p3-common/c6-customDialog/CustomDialog";
-import {CustomButton} from "../../../../../../p3-common/c7-customButton/CustomButton";
+import {WorkDialog} from "../../../../../../p3-common/c6-workDialog/WorkDialog";
+import {CloseButton, ViewButton} from "../../../../../../p3-common/c6-workDialog/w1-buttons/DialogButtons";
 
 const dialogStyles = {
     maxWidth: 900,
@@ -29,7 +29,8 @@ const imgBoxStyle = {
         xl: 836,
     },
     display: "block",
-    margin: "0 auto"
+    margin: "0 auto",
+    borderRadius: "1.5rem"
 };
 
 
@@ -53,7 +54,7 @@ export const WorkItems = ({item}: WorkItemsType) => {
             </button>
 
             <ThemeProvider theme={customTheme}>
-                <CustomDialog
+                <WorkDialog
                     open={open}
                     onClose={handleClose}
                     aria-labelledby="alert-dialog-title"
@@ -73,11 +74,13 @@ export const WorkItems = ({item}: WorkItemsType) => {
                         <Typography id="modal-modal-title"
                                     sx={{
                                         color: "var(--title-color)",
-                                        fontSize: "var(--normal-font-size)",
+                                        fontSize: "var(--h3-font-size)",
                                         fontWeight: "var(--font-medium)",
                                         fontFamily: "var(--body-font)",
+                                        textAlign: "center",
                                         mt: 2,
-                                        ml: 1
+                                        ml: 0.7,
+                                        mb: 0.5,
                                     }}>
                             {item.title}
                         </Typography>
@@ -87,22 +90,25 @@ export const WorkItems = ({item}: WorkItemsType) => {
                                         fontSize: "var(--normal-font-size)",
                                         fontWeight: "var(--font-medium)",
                                         fontFamily: "var(--body-font)",
-                                        ml: 1
+                                        ml: 0.7
                                     }}>
                             Stack: {item.stack}
                         </Typography>
                         <Typography id="modal-modal-description"
                                     sx={{
-                                        color: "var(--title-color)",
+                                        color: "var(--text-color)",
                                         fontSize: "var(--normal-font-size)",
                                         fontFamily: "var(--body-font)",
-                                        ml: 1
+                                        ml: 0.7
                                     }}>
-                            Desctiption: {item.description}
+                            Description: {item.description}
                         </Typography>
-                        <CustomButton link={item.link}/>
                     </DialogContent>
-                </CustomDialog>
+                    <DialogActions>
+                        <ViewButton link={item.link}/>
+                        <CloseButton callback={handleClose}/>
+                    </DialogActions>
+                </WorkDialog>
             </ThemeProvider>
         </div>
     );

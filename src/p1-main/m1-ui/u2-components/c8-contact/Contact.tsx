@@ -69,7 +69,7 @@ export const Contact = () => {
                                      iconClass={"bx bxl-telegram"}/>
                     </div>
                 </div>
-                <div>
+                <div className={`${styles.form__container}`}>
                     <h3 className={`${styles.contact__title}`}>Write me!</h3>
 
                     <form className={`${styles.contact__form}`} onSubmit={handleSubmit(sendEmail)}>

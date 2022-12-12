@@ -16,7 +16,7 @@ function App() {
     return (
         <>
             <Header/>
-            <main className="main">
+            <div className="main">
                 <Home/>
                 <About/>
                 <SkillsBar/>
@@ -27,9 +27,10 @@ function App() {
                 <Work/>
                 {/*<Testimonials/>*/} {/* Created, but temporary unused component */}
                 <Contact/>
-            </main>
+            </div>
             <Footer/>
             <ScrollUp/>
+
         </>
 
     );
