@@ -7,7 +7,8 @@ export const ScrollDown = () => {
 
     return (
         <div className={`${styles.home__scroll}`}>
-            <Link to={`about`} smooth={true} duration={500} className="button--flex" style={{cursor: "pointer"}}>
+            <Link to={`about`} offset={-50} smooth={true} duration={500} className="button--flex"
+                  style={{cursor: "pointer"}}>
                 <svg
                     width="32px"
                     height="32px"
